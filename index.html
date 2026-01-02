@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Gargaar Omsorg AB – Professionell omsorg med trygghet och respekt
+    </title>
+    <meta
+      name="description"
+      content="Gargaar Omsorg AB erbjuder professionell och individanpassad omsorg i Sverige. Ledsagare och boendestöd med fokus på trygghet, självständighet och livskvalitet."
+    />
+    <meta name="author" content="Gargaar Omsorg AB" />
+    <meta
+      name="keywords"
+      content="omsorg, ledsagare, boendestöd, hemtjänst, vård, stöd, Sverige, trygghet, självständighet"
+    />
+
+    <meta
+      property="og:title"
+      content="Gargaar Omsorg AB – Omsorg med trygghet och respekt"
+    />
+    <meta
+      property="og:description"
+      content="Professionell och individanpassad omsorg med fokus på trygghet, självständighet och livskvalitet. Ledsagare och boendestöd i Sverige."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Gargaar Omsorg AB – Omsorg med trygghet och respekt"
+    />
+    <meta
+      name="twitter:description"
+      content="Professionell och individanpassad omsorg med fokus på trygghet och livskvalitet."
+    />
+
+    <link rel="canonical" href="https://gargaaromsorg.se" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: "hsl(158, 64%, 35%)",
+                foreground: "hsl(0, 0%, 100%)",
+                dark: "hsl(158, 70%, 25%)",
+              },
+              secondary: {
+                DEFAULT: "hsl(150, 25%, 92%)",
+                foreground: "hsl(160, 30%, 20%)",
+              },
+              muted: {
+                DEFAULT: "hsl(150, 15%, 94%)",
+                foreground: "hsl(160, 10%, 45%)",
+              },
+              accent: {
+                DEFAULT: "hsl(38, 70%, 50%)",
+                foreground: "hsl(0, 0%, 100%)",
+              },
+              emerald: {
+                DEFAULT: "hsl(158, 64%, 35%)",
+                dark: "hsl(158, 70%, 22%)",
+                light: "hsl(158, 45%, 50%)",
+              },
+              sage: {
+                DEFAULT: "hsl(150, 30%, 85%)",
+                light: "hsl(150, 35%, 95%)",
+              },
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Source Sans 3", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        /* Healthcare-inspired emerald palette */
+        --background: 150 20% 98%;
+        --foreground: 160 30% 15%;
+        --card: 0 0% 100%;
+        --card-foreground: 160 30% 15%;
+        --primary: 158 64% 35%;
+        --primary-foreground: 0 0% 100%;
+        --primary-light: 158 50% 45%;
+        --primary-dark: 158 70% 25%;
+        --secondary: 150 25% 92%;
+        --secondary-foreground: 160 30% 20%;
+        --muted: 150 15% 94%;
+        --muted-foreground: 160 10% 45%;
+        --accent: 38 70% 50%;
+        --accent-foreground: 0 0% 100%;
+        --border: 150 20% 88%;
+        --emerald: 158 64% 35%;
+        --emerald-light: 158 45% 50%;
+        --emerald-dark: 158 70% 22%;
+        --sage: 150 30% 85%;
+        --sage-light: 150 35% 95%;
+      }
+
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .font-display {
+        font-family: "Playfair Display", serif;
+      }
+
+      .font-body {
+        font-family: "Source Sans 3", sans-serif;
+      }
+
+      .bg-primary {
+        background-color: hsl(var(--primary));
+      }
+
+      .text-primary {
+        color: hsl(var(--primary));
+      }
+
+      .bg-primary-dark {
+        background-color: hsl(var(--primary-dark));
+      }
+
+      .text-primary-foreground {
+        color: hsl(var(--primary-foreground));
+      }
+
+      .bg-secondary {
+        background-color: hsl(var(--secondary));
+      }
+
+      .text-secondary-foreground {
+        color: hsl(var(--secondary-foreground));
+      }
+
+      .bg-muted {
+        background-color: hsl(var(--muted));
+      }
+
+      .text-muted-foreground {
+        color: hsl(var(--muted-foreground));
+      }
+
+      .bg-accent {
+        background-color: hsl(var(--accent));
+      }
+
+      .text-accent-foreground {
+        color: hsl(var(--accent-foreground));
+      }
+
+      .bg-emerald-dark {
+        background-color: hsl(var(--emerald-dark));
+      }
+
+      .bg-sage-light {
+        background-color: hsl(var(--sage-light));
+      }
+
+      .shadow-soft {
+        box-shadow: 0 4px 20px -4px hsl(160 30% 15% / 0.08);
+      }
+
+      .shadow-medium {
+        box-shadow: 0 8px 30px -6px hsl(160 30% 15% / 0.12);
+      }
+
+      .shadow-glow {
+        box-shadow: 0 0 40px hsl(158 64% 35% / 0.15);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Button Styles */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-family: "Source Sans 3", sans-serif;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+      .btn:focus-visible {
+        outline: 2px solid hsl(var(--primary));
+        outline-offset: 2px;
+      }
+
+      .btn-default {
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        box-shadow: 0 2px 8px rgba(22, 101, 52, 0.2);
+        font-weight: 600;
+      }
+
+      .btn-default:hover {
+        background-color: hsl(var(--primary-dark));
+        box-shadow: 0 4px 12px rgba(22, 101, 52, 0.3);
+        transform: translateY(-1px);
+      }
+
+      .btn-default:active {
+        transform: translateY(0);
+      }
+
+      .btn-cta {
+        background-color: hsl(var(--accent));
+        color: hsl(var(--accent-foreground));
+        box-shadow: 0 8px 30px -6px hsl(160 30% 15% / 0.12);
+        font-weight: 700;
+      }
+
+      .btn-cta:hover {
+        box-shadow: 0 0 40px hsl(158 64% 35% / 0.15);
+        transform: translateY(-2px);
+      }
+
+      .btn-hero-outline {
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        color: hsl(var(--primary-foreground));
+        background-color: transparent;
+        backdrop-filter: blur(4px);
+      }
+
+      .btn-hero-outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-lg {
+        height: 3rem;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+      }
+
+      .btn-xl {
+        height: 3.5rem;
+        padding: 1rem 2.5rem;
+        font-size: 1.125rem;
+        border-radius: 0.75rem;
+      }
+
+      /* Header scroll effect */
+      header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Modal styles */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9998;
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: white;
+        border-radius: 1rem;
+        max-width: 500px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        z-index: 9999;
+        animation: fadeInUp 0.4s ease-out;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-content::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .modal-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      .modal-content::-webkit-scrollbar-thumb {
+        background: hsl(var(--primary));
+        border-radius: 10px;
+      }
+
+      .modal-content::-webkit-scrollbar-thumb:hover {
+        background: hsl(var(--primary-dark));
+      }
+
+      /* Form styles */
+      .form-group {
+        margin-bottom: 1.25rem;
+      }
+
+      .form-label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: hsl(var(--foreground));
+        font-size: 0.95rem;
+      }
+
+      .form-label .required {
+        color: #dc2626;
+        margin-left: 2px;
+      }
+
+      .form-input,
+      .form-select {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 2px solid hsl(var(--border));
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-family: "Source Sans 3", sans-serif;
+        transition: all 0.2s;
+        background-color: white;
+      }
+
+      .form-input:focus,
+      .form-select:focus {
+        outline: none;
+        border-color: hsl(var(--primary));
+        box-shadow: 0 0 0 3px hsla(158, 64%, 35%, 0.1);
+      }
+
+      .form-input.error,
+      .form-select.error {
+        border-color: #dc2626;
+      }
+
+      .error-message {
+        display: none;
+        color: #dc2626;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        font-weight: 500;
+      }
+
+      .error-message.visible {
+        display: block;
+      }
+
+      .success-message {
+        display: none;
+        background-color: #dcfce7;
+        color: #15803d;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .success-message.visible {
+        display: block;
+      }
+
+      /* Prevent body scroll when modal is open */
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      /* Mobile menu */
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      @media (max-width: 1023px) {
+        .desktop-nav {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .mobile-menu {
+          display: none !important;
+        }
+      }
+
+      /* Services dropdown */
+      .services-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 0.5rem;
+        width: 12rem;
+        background-color: hsl(var(--card));
+        border-radius: 0.5rem;
+        box-shadow: 0 8px 30px -6px hsl(160 30% 15% / 0.12);
+        padding: 0.5rem 0;
+        z-index: 50;
+      }
+
+      .services-dropdown.open {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4"
+    >
+      <div class="container mx-auto px-4 lg:px-8">
+        <nav class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 group">
+            <div
+              class="w-10 h-10 rounded-full bg-primary flex items-center justify-center"
+            >
+              <span
+                class="text-primary-foreground font-display font-bold text-lg"
+                >G</span
+              >
+            </div>
+            <span class="font-display font-semibold text-xl text-foreground">
+              Gargaar Omsorg AB
+            </span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav hidden lg:flex items-center gap-8">
+            <button
+              onclick="scrollToSection('hem')"
+              class="font-body font-medium transition-colors hover:text-primary text-foreground"
+            >
+              Hem
+            </button>
+            <button
+              onclick="scrollToSection('om-oss')"
+              class="font-body font-medium transition-colors hover:text-primary text-foreground"
+            >
+              Om oss
+            </button>
+
+            <!-- Services Dropdown -->
+            <div class="relative" id="services-container">
+              <button
+                id="services-btn"
+                onclick="toggleServicesDropdown(event)"
+                class="font-body font-medium transition-colors hover:text-primary flex items-center gap-1 text-foreground"
+              >
+                Tjänster
+                <svg
+                  id="chevron-icon"
+                  class="w-4 h-4 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <div id="services-dropdown" class="services-dropdown">
+                <button
+                  onclick="scrollToSection('ledsagare'); closeServicesDropdown();"
+                  class="block w-full text-left px-4 py-2 font-body text-foreground hover:bg-secondary hover:text-primary transition-colors"
+                >
+                  Ledsagare
+                </button>
+                <button
+                  onclick="scrollToSection('boendestod'); closeServicesDropdown();"
+                  class="block w-full text-left px-4 py-2 font-body text-foreground hover:bg-secondary hover:text-primary transition-colors"
+                >
+                  Boendestöd
+                </button>
+              </div>
+            </div>
+
+            <button
+              onclick="scrollToSection('kontakt')"
+              class="font-body font-medium transition-colors hover:text-primary text-foreground"
+            >
+              Kontakta oss
+            </button>
+
+            <button
+              onclick="openModal()"
+              class="btn btn-default px-6 py-2.5 text-base"
+            >
+              Bli kund
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle menu"
+          >
+            <svg
+              id="menu-icon"
+              class="w-6 h-6 text-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-6 h-6 text-foreground hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden mt-4 pb-4">
+          <div class="flex flex-col gap-4 bg-card rounded-xl p-4 shadow-medium">
+            <button
+              onclick="scrollToSection('hem')"
+              class="font-body font-medium text-foreground hover:text-primary transition-colors text-left py-2"
+            >
+              Hem
+            </button>
+            <button
+              onclick="scrollToSection('om-oss')"
+              class="font-body font-medium text-foreground hover:text-primary transition-colors text-left py-2"
+            >
+              Om oss
+            </button>
+            <div class="border-t border-gray-200 pt-2">
+              <p
+                class="font-body font-semibold text-muted-foreground text-sm mb-2"
+              >
+                Tjänster
+              </p>
+              <button
+                onclick="scrollToSection('ledsagare')"
+                class="block w-full font-body text-foreground hover:text-primary transition-colors text-left py-2 pl-4"
+              >
+                Ledsagare
+              </button>
+              <button
+                onclick="scrollToSection('boendestod')"
+                class="block w-full font-body text-foreground hover:text-primary transition-colors text-left py-2 pl-4"
+              >
+                Boendestöd
+              </button>
+            </div>
+            <button
+              onclick="scrollToSection('kontakt')"
+              class="font-body font-medium text-foreground hover:text-primary transition-colors text-left py-2"
+            >
+              Kontakta oss
+            </button>
+            <button onclick="openModal()" class="btn btn-default btn-lg mt-2">
+              Bli kund
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hem" class="relative min-h-screen flex items-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="assets/hero-care.jpg"
+            alt="Professionell omsorg och stöd"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-emerald-dark/90 via-emerald-dark/70 to-transparent"
+          ></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-4 lg:px-8 relative z-10 pt-24">
+          <div class="max-w-2xl">
+            <div class="animate-fade-in-up">
+              <span
+                class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-body font-medium text-sm mb-6"
+              >
+                Välkommen till Gargaar Omsorg AB
+              </span>
+            </div>
+
+            <h1
+              class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up"
+              style="animation-delay: 0.1s"
+            >
+              Omsorg med trygghet och respekt
+            </h1>
+
+            <p
+              class="font-body text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-fade-in-up"
+              style="animation-delay: 0.2s"
+            >
+              Gargaar Omsorg AB erbjuder professionell och individanpassad
+              omsorg med fokus på trygghet, självständighet och livskvalitet.
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
+              style="animation-delay: 0.3s"
+            >
+              <button
+                onclick="scrollToSection('kontakt')"
+                class="btn btn-cta btn-xl"
+              >
+                Kontakta oss
+              </button>
+              <button
+                onclick="scrollToSection('om-oss')"
+                class="btn btn-hero-outline btn-xl"
+              >
+                Läs mer om oss
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div
+          class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10"
+        ></div>
+      </section>
+
+      <!-- About Section -->
+      <section id="om-oss" class="py-20 lg:py-32 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-2 bg-secondary rounded-full text-primary font-body font-semibold text-sm mb-4"
+            >
+              Om oss
+            </span>
+            <h2
+              class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            >
+              Engagerad omsorg för alla
+            </h2>
+            <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+
+          <!-- Content Grid -->
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <!-- Image -->
+            <div class="relative group">
+              <div
+                class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-emerald-light/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+              ></div>
+              <div class="relative overflow-hidden rounded-2xl shadow-medium">
+                <img
+                  src="assets/team-about.jpg"
+                  alt="Vårt professionella vårdteam"
+                  class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <!-- Stats Badge -->
+              <div
+                class="absolute -bottom-6 -right-6 bg-card rounded-2xl shadow-medium p-6 hidden sm:block"
+              >
+                <div class="text-center">
+                  <span
+                    class="block font-display text-3xl font-bold text-primary"
+                    >100%</span
+                  >
+                  <span class="font-body text-sm text-muted-foreground"
+                    >Engagerad personal</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="lg:pl-8">
+              <h3
+                class="font-display text-2xl md:text-3xl font-semibold text-foreground mb-6"
+              >
+                Trygghet och stöd i vardagen
+              </h3>
+
+              <p
+                class="font-body text-lg text-muted-foreground mb-6 leading-relaxed"
+              >
+                Gargaar Omsorg AB är ett engagerat omsorgsföretag som arbetar
+                för att skapa trygghet och stöd i vardagen. Vi har erfaren
+                personal och anpassar våra tjänster efter varje individs behov.
+              </p>
+
+              <p
+                class="font-body text-lg text-muted-foreground mb-8 leading-relaxed"
+              >
+                Vårt mål är att stärka självständighet och välbefinnande genom
+                respektfull och professionell omsorg.
+              </p>
+
+              <!-- Values -->
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 bg-secondary rounded-xl">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-semibold text-foreground mb-1">
+                      Omtanke
+                    </h4>
+                    <p class="font-body text-sm text-muted-foreground">
+                      Med hjärtat i allt vi gör
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-secondary rounded-xl">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-semibold text-foreground mb-1">
+                      Trygghet
+                    </h4>
+                    <p class="font-body text-sm text-muted-foreground">
+                      Säkerhet i vardagen
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-secondary rounded-xl">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-semibold text-foreground mb-1">
+                      Respekt
+                    </h4>
+                    <p class="font-body text-sm text-muted-foreground">
+                      För varje individ
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-secondary rounded-xl">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-semibold text-foreground mb-1">
+                      Kvalitet
+                    </h4>
+                    <p class="font-body text-sm text-muted-foreground">
+                      Professionell omsorg
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-20 lg:py-32 bg-sage-light">
+        <div class="container mx-auto px-4 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-body font-semibold text-sm mb-4"
+            >
+              Våra tjänster
+            </span>
+            <h2
+              class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            >
+              Stöd anpassat efter dina behov
+            </h2>
+            <p
+              class="font-body text-lg text-muted-foreground max-w-2xl mx-auto"
+            >
+              Vi erbjuder professionella omsorgstjänster med fokus på individen
+            </p>
+          </div>
+
+          <!-- Services -->
+          <div class="space-y-20">
+            <!-- Ledsagare -->
+            <div id="ledsagare" class="scroll-mt-24">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative group order-2 lg:order-1">
+                  <div
+                    class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-emerald-light/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"
+                  ></div>
+                  <div
+                    class="relative overflow-hidden rounded-2xl shadow-medium"
+                  >
+                    <img
+                      src="assets/ledsagare-service.jpg"
+                      alt="Ledsagartjänst - promenad och sällskap"
+                      class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                  <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="font-body font-semibold text-primary text-sm"
+                      >Tjänst</span
+                    >
+                  </div>
+
+                  <h3
+                    class="font-display text-2xl md:text-3xl font-bold text-foreground mb-6"
+                  >
+                    Ledsagare
+                  </h3>
+
+                  <p
+                    class="font-body text-lg text-muted-foreground mb-6 leading-relaxed"
+                  >
+                    Vi erbjuder ledsagning vid promenader, sociala aktiviteter,
+                    vårdbesök och andra ärenden för att skapa trygghet och
+                    delaktighet i samhället.
+                  </p>
+
+                  <ul class="space-y-3 mb-8">
+                    <li
+                      class="flex items-center gap-3 font-body text-foreground"
+                    >
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      Promenader och utomhusaktiviteter
+                    </li>
+                    <li
+                      class="flex items-center gap-3 font-body text-foreground"
+                    >
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      Sällskap vid vårdbesök
+                    </li>
+                    <li
+                      class="flex items-center gap-3 font-body text-foreground"
+                    >
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      Sociala aktiviteter och evenemang
+                    </li>
+                  </ul>
+
+                  <button
+                    onclick="scrollToSection('kontakt')"
+                    class="btn btn-default btn-lg"
+                  >
+                    Läs mer om ledsagning
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Boendestöd -->
+            <div id="boendestod" class="scroll-mt-24">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6"
+                  >
+                    <svg
+                      class="w-5 h-5 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                      />
+                    </svg>
+                    <span class="font-body font-semibold text-primary text-sm"
+                      >Tjänst</span
+                    >
+                  </div>
+
+                  <h3
+                    class="font-display text-2xl md:text-3xl font-bold text-foreground mb-6"
+                  >
+                    Boendestöd
+                  </h3>
+
+                  <p
+                    class="font-body text-lg text-muted-foreground mb-6 leading-relaxed"
+                  >
+                    Boendestöd innebär praktiskt och socialt stöd i hemmet för
+                    att underlätta vardagen och stärka individens
+                    självständighet.
+                  </p>
+
+                  <ul class="space-y-3 mb-8">
+                    <li
+                      class="flex items-center gap-3 font-body text-foreground"
+                    >
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      Praktisk hjälp i vardagen
+                    </li>
+                    <li
+                      class="flex items-center gap-3 font-body text-foreground"
+                    >
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      Socialt stöd och motivation
+                    </li>
+                    <li
+                      class="flex items-center gap-3 font-body text-foreground"
+                    >
+                      <div
+                        class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      Stöd för ökad självständighet
+                    </li>
+                  </ul>
+
+                  <button
+                    onclick="scrollToSection('kontakt')"
+                    class="btn btn-default btn-lg"
+                  >
+                    Läs mer om boendestöd
+                  </button>
+                </div>
+
+                <div class="relative group">
+                  <div
+                    class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-emerald-light/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"
+                  ></div>
+                  <div
+                    class="relative overflow-hidden rounded-2xl shadow-medium"
+                  >
+                    <img
+                      src="assets/boendestod-service.jpg"
+                      alt="Boendestöd - stöd i hemmet"
+                      class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="kontakt" class="py-20 lg:py-32 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-2 bg-secondary rounded-full text-primary font-body font-semibold text-sm mb-4"
+            >
+              Kontakta oss
+            </span>
+            <h2
+              class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            >
+              Vi finns här för dig
+            </h2>
+            <p
+              class="font-body text-lg text-muted-foreground max-w-2xl mx-auto"
+            >
+              Tveka inte att höra av dig – vi hjälper dig gärna med dina frågor
+              om våra tjänster
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            <!-- Contact Info -->
+            <div>
+              <div
+                class="bg-gradient-to-br from-white/80 via-white/60 to-white/50 rounded-3xl shadow-xl p-8 lg:p-10 h-full border border-gray-200"
+              >
+                <h3
+                  class="font-display text-3xl font-extrabold text-gray-900 mb-10"
+                >
+                  Kontaktuppgifter
+                </h3>
+
+                <!-- Verksamhetschef -->
+                <div
+                  class="flex items-start gap-5 mb-6 p-5 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-800">
+                      Verksamhetschef
+                    </h4>
+                    <p class="text-gray-600 mb-1">Nasser Hussein</p>
+                    <h4 class="text-sm font-semibold text-gray-700">Telefon</h4>
+                    <a
+                      href="tel:070-4828573"
+                      class="text-primary font-medium text-lg hover:text-primary-dark transition-colors"
+                    >
+                      070-482 8573
+                    </a>
+                    <p class="text-sm text-gray-500 mt-1">
+                      Vardagar 08:00 - 17:00
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Verksamhetschef Email -->
+                <div
+                  class="flex items-start gap-5 mb-6 p-5 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-semibold text-gray-700 mb-1">
+                      E-Post
+                    </h4>
+                    <a
+                      href="mailto:nasir.caali@gmail.com"
+                      class="text-primary font-medium text-lg hover:text-primary-dark transition-colors"
+                    >
+                      nasir.caali@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Admin -->
+                <div
+                  class="flex items-start gap-5 mb-6 p-5 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-800">
+                      Administör
+                    </h4>
+                    <p class="text-gray-600 mb-1">Catrine Bergström</p>
+                    <h4 class="text-sm font-semibold text-gray-700">Telefon</h4>
+                    <a
+                      href="tel:070-4768824"
+                      class="text-primary font-medium text-lg hover:text-primary-dark transition-colors"
+                    >
+                      070-476 88 24
+                    </a>
+                    <p class="text-sm text-gray-500 mt-1">
+                      Vardagar 08:00 - 17:00
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Admin Email -->
+                <div
+                  class="flex items-start gap-5 mb-6 p-5 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-7 h-7 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-semibold text-gray-700 mb-1">
+                      E-Post
+                    </h4>
+                    <a
+                      href="mailto:iman70@live.se"
+                      class="text-primary font-medium text-lg hover:text-primary-dark transition-colors"
+                    >
+                      iman70@live.se
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Important Numbers -->
+                <div class="space-y-4 pt-8 border-t border-gray-200">
+                  <h4
+                    class="font-display font-bold text-gray-900 flex items-center gap-2 text-lg"
+                  >
+                    <svg
+                      class="w-5 h-5 text-red-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                      />
+                    </svg>
+                    Viktiga nummer
+                  </h4>
+
+                  <div class="grid gap-4">
+                    <div
+                      class="flex items-center justify-between p-4 bg-red-50 rounded-xl border border-red-200 hover:shadow-md transition-all duration-300"
+                    >
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center"
+                        >
+                          <svg
+                            class="w-6 h-6 text-red-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="font-semibold text-gray-800">Akut</p>
+                          <p class="text-sm text-gray-500">Vid nödsituation</p>
+                        </div>
+                      </div>
+                      <a href="tel:112" class="text-2xl font-bold text-red-500">
+                        112
+                      </a>
+                    </div>
+
+                    <div
+                      class="flex items-center justify-between p-4 bg-primary/10 rounded-xl border border-primary/20 hover:shadow-md transition-all duration-300"
+                    >
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"
+                        >
+                          <svg
+                            class="w-6 h-6 text-primary"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="font-semibold text-gray-800">
+                            1177 Vårdguiden
+                          </p>
+                          <p class="text-sm text-gray-500">
+                            Sjukvårdsrådgivning
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href="tel:1177"
+                        class="text-2xl font-bold text-primary"
+                      >
+                        1177
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Friendly Message -->
+            <div class="flex flex-col justify-center">
+              <div
+                class="bg-gradient-to-br from-primary/90 to-emerald-600 rounded-3xl p-8 lg:p-10 text-white shadow-xl"
+              >
+                <div
+                  class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+
+                <h3
+                  class="font-display text-3xl lg:text-4xl font-extrabold mb-4"
+                >
+                  Välkommen att höra av dig!
+                </h3>
+
+                <p class="text-lg mb-6 leading-relaxed">
+                  Vi på Gargaar Omsorg AB är alltid redo att svara på dina
+                  frågor och hjälpa dig hitta rätt stöd. Oavsett om du är
+                  anhörig, beställare eller bara vill veta mer – vi finns här
+                  för dig.
+                </p>
+
+                <p class="leading-relaxed mb-6">
+                  Ring oss, så pratar vi igenom hur vi kan hjälpa dig eller din
+                  närstående att få en tryggare vardag.
+                </p>
+
+                <div class="mt-6 pt-4 border-t border-white/30">
+                  <p class="text-sm text-white/70 mb-2">Ring oss direkt</p>
+                  <a
+                    href="tel:070-476 88 24"
+                    class="inline-flex items-center gap-3 text-2xl font-bold text-white hover:text-white/80 transition-colors"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    070-476 88 24
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bli Kund Modal -->
+    <div
+      id="bliKundModal"
+      class="modal-overlay"
+      onclick="closeModalOnOverlay(event)"
+    >
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="p-6 md:p-8">
+          <!-- Close Button -->
+          <button
+            onclick="closeModal()"
+            class="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+            aria-label="Stäng"
+          >
+            <svg
+              class="w-5 h-5 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <!-- Header -->
+          <div class="mb-6">
+            <div
+              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-7 h-7 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                />
+              </svg>
+            </div>
+            <h2
+              class="font-display text-2xl md:text-3xl font-bold text-foreground mb-2"
+            >
+              Bli kund hos oss
+            </h2>
+            <p class="text-muted-foreground">
+              Fyll i formuläret så kontaktar vi dig inom kort
+            </p>
+          </div>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="success-message">
+            Tack! Vi har tagit emot din förfrågan.
+          </div>
+
+          <!-- Form -->
+          <form id="bliKundForm" action="submit-form.php" method="POST">
+            <!-- Namn -->
+            <div class="form-group">
+              <label for="namn" class="form-label">
+                Namn <span class="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="namn"
+                name="namn"
+                class="form-input"
+                placeholder="Ditt fullständiga namn"
+                required
+              />
+              <span id="namnError" class="error-message"
+                >Vänligen ange ditt namn</span
+              >
+            </div>
+
+            <!-- Telefonnummer -->
+            <div class="form-group">
+              <label for="telefon" class="form-label">
+                Telefonnummer <span class="required">*</span>
+              </label>
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                class="form-input"
+                placeholder="070-123 45 67"
+                required
+              />
+              <span id="telefonError" class="error-message"
+                >Vänligen ange ett giltigt telefonnummer</span
+              >
+            </div>
+
+            <!-- E-post -->
+            <div class="form-group">
+              <label for="epost" class="form-label">
+                E-post
+                <span class="text-muted-foreground text-sm">(frivillig)</span>
+              </label>
+              <input
+                type="email"
+                id="epost"
+                name="epost"
+                class="form-input"
+                placeholder="din@email.se"
+              />
+              <span id="epostError" class="error-message"
+                >Vänligen ange en giltig e-postadress</span
+              >
+            </div>
+
+            <!-- Tjänster -->
+            <div class="form-group">
+              <label for="tjanster" class="form-label">
+                Tjänster <span class="required">*</span>
+              </label>
+              <select
+                id="tjanster"
+                name="tjanster"
+                class="form-select"
+                required
+              >
+                <option value="">Välj en tjänst</option>
+                <option value="Ledsagare">Ledsagare</option>
+                <option value="Boendestöd">Boendestöd</option>
+                <option value="Ledsagare + Boendestöd">
+                  Ledsagare + Boendestöd
+                </option>
+              </select>
+              <span id="tjansterError" class="error-message"
+                >Vänligen välj en tjänst</span
+              >
+            </div>
+
+            <!-- Meddelande -->
+            <div class="form-group w-full">
+              <label for="meddelande" class="form-label">
+                Meddelande
+                <span class="text-muted-foreground text-sm">(frivillig)</span>
+              </label>
+              <textarea
+                id="meddelande"
+                name="meddelande"
+                rows="4"
+                class="form-input resize-none"
+                placeholder="Berätta mer om din förfrågan..."
+              ></textarea>
+            </div>
+
+            <!-- GDPR Consent -->
+            <div class="form-group">
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  id="gdpr-consent"
+                  name="gdpr_consent"
+                  class="mt-1 w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary"
+                  required
+                />
+                <span class="text-sm text-muted-foreground leading-relaxed">
+                  Genom att skicka detta formulär samtycker du till att vi
+                  samlar in och behandlar dina personuppgifter i enlighet med
+                  vår
+                  <a
+                    href="privacy-policy.html"
+                    target="_blank"
+                    class="text-primary hover:underline font-semibold"
+                    >Integritetspolicy (GDPR)</a
+                  >. Dina uppgifter lagras säkert och används endast för det
+                  angivna ändamålet. Du har rätt att när som helst begära
+                  tillgång till, rättelse eller radering av dina uppgifter.
+                  <span class="required">*</span>
+                </span>
+              </label>
+              <span id="gdprError" class="error-message"
+                >Du måste godkänna behandling av personuppgifter</span
+              >
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="btn btn-default btn-lg w-full mt-4"
+              id="submitBtn"
+            >
+              Skicka förfrågan
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-dark py-12">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <!-- Logo & Company Name -->
+          <a href="/" class="flex items-center gap-2 group">
+            <div
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"
+            >
+              <span class="text-white font-display font-bold text-lg">G</span>
+            </div>
+            <span class="font-display font-semibold text-xl text-white">
+              Gargaar Omsorg AB
+            </span>
+          </a>
+
+          <!-- Copyright -->
+          <p class="font-body text-white/70 text-sm text-center" id="copyright">
+            © <span id="current-year"></span> Gargaar Omsorg AB – Alla
+            rättigheter förbehållna
+          </p>
+
+          <!-- Quick Links -->
+          <div class="flex items-center gap-6">
+            <button
+              onclick="scrollToSection('om-oss')"
+              class="font-body text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Om oss
+            </button>
+            <button
+              onclick="scrollToSection('kontakt')"
+              class="font-body text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Kontakt
+            </button>
+            <a
+              href="privacy-policy.html"
+              class="font-body text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Integritetspolicy
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Header scroll effect - show only when scrolling down
+      const header = document.getElementById("header");
+      let lastScrollY = 0;
+      let isAtTop = true;
+
+      function handleScroll() {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY <= 100) {
+          // At the top - hide header
+          header.classList.add("header-hidden");
+          header.classList.remove("header-visible");
+          isAtTop = true;
+        } else {
+          // Scrolled down - show header
+          if (isAtTop) {
+            header.classList.remove("header-hidden");
+            header.classList.add("header-visible");
+            isAtTop = false;
+          }
+        }
+
+        lastScrollY = currentScrollY;
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Initial check
+
+      // Modal Functions
+      function openModal() {
+        const modal = document.getElementById("bliKundModal");
+        modal.classList.add("active");
+        document.body.classList.add("modal-open");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("bliKundModal");
+        modal.classList.remove("active");
+        document.body.classList.remove("modal-open");
+        // Reset form and error messages
+        const form = document.getElementById("bliKundForm");
+        form.reset();
+        clearErrors();
+        document.getElementById("successMessage").classList.remove("visible");
+      }
+
+      function closeModalOnOverlay(event) {
+        if (event.target.id === "bliKundModal") {
+          closeModal();
+        }
+      }
+
+      // Close modal on ESC key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          const modal = document.getElementById("bliKundModal");
+          if (modal.classList.contains("active")) {
+            closeModal();
+          }
+        }
+      });
+
+      // Form Validation
+      function clearErrors() {
+        const errorMessages = document.querySelectorAll(".error-message");
+        errorMessages.forEach((error) => error.classList.remove("visible"));
+
+        const inputs = document.querySelectorAll(".form-input, .form-select");
+        inputs.forEach((input) => input.classList.remove("error"));
+      }
+
+      function showError(fieldId, errorId) {
+        document.getElementById(fieldId).classList.add("error");
+        document.getElementById(errorId).classList.add("visible");
+      }
+
+      function validateForm() {
+        clearErrors();
+        let isValid = true;
+
+        // Validate Namn
+        const namn = document.getElementById("namn").value.trim();
+        if (!namn) {
+          showError("namn", "namnError");
+          isValid = false;
+        }
+
+        // Validate Telefonnummer
+        const telefon = document.getElementById("telefon").value.trim();
+        const phonePattern = /^[\d\s\-\+\(\)]+$/;
+        if (!telefon || !phonePattern.test(telefon) || telefon.length < 8) {
+          showError("telefon", "telefonError");
+          isValid = false;
+        }
+
+        // Validate E-post (if provided)
+        const epost = document.getElementById("epost").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (epost && !emailPattern.test(epost)) {
+          showError("epost", "epostError");
+          isValid = false;
+        }
+
+        // Validate Tjänster
+        const tjanster = document.getElementById("tjanster").value;
+        if (!tjanster) {
+          showError("tjanster", "tjansterError");
+          isValid = false;
+        }
+
+        // Validate GDPR Consent
+        const gdprConsent = document.getElementById("gdpr-consent").checked;
+        if (!gdprConsent) {
+          document.getElementById("gdprError").classList.add("visible");
+          isValid = false;
+        }
+
+        return isValid;
+      }
+
+      // Form submission
+      document
+        .getElementById("bliKundForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (!validateForm()) {
+            return;
+          }
+
+          const submitBtn = document.getElementById("submitBtn");
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = "Skickar...";
+          submitBtn.disabled = true;
+
+          // Create FormData
+          const formData = new FormData(this);
+
+          // Submit via AJAX
+          fetch("submit-form.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              console.log("Response status:", response.status);
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Response data:", data);
+              if (data.success) {
+                // Show success message
+                document
+                  .getElementById("successMessage")
+                  .classList.add("visible");
+                // Clear form
+                this.reset();
+                // Hide form temporarily
+                setTimeout(() => {
+                  closeModal();
+                }, 3000);
+              } else {
+                alert(
+                  "Ett fel uppstod: " + (data.message || "Försök igen senare.")
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Fetch error:", error);
+              alert(
+                "Ett fel uppstod vid skickandet. Kontrollera att PHP är aktiverat.\n\nFelmeddelande: " +
+                  error.message
+              );
+            })
+            .finally(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            });
+        });
+
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        mobileMenu.classList.toggle("open");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      }
+
+      // Services dropdown
+      let servicesDropdownOpen = false;
+
+      function toggleServicesDropdown(event) {
+        event.stopPropagation();
+        servicesDropdownOpen = !servicesDropdownOpen;
+        const dropdown = document.getElementById("services-dropdown");
+        const chevron = document.getElementById("chevron-icon");
+
+        if (servicesDropdownOpen) {
+          dropdown.classList.add("open");
+          chevron.classList.add("rotate-180");
+        } else {
+          dropdown.classList.remove("open");
+          chevron.classList.remove("rotate-180");
+        }
+      }
+
+      function closeServicesDropdown() {
+        servicesDropdownOpen = false;
+        const dropdown = document.getElementById("services-dropdown");
+        const chevron = document.getElementById("chevron-icon");
+        if (dropdown && chevron) {
+          dropdown.classList.remove("open");
+          chevron.classList.remove("rotate-180");
+        }
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        const servicesContainer = document.getElementById("services-container");
+        if (servicesContainer && !servicesContainer.contains(event.target)) {
+          closeServicesDropdown();
+        }
+      });
+
+      // Smooth scroll to section
+      function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (mobileMenu.classList.contains("open")) {
+            toggleMobileMenu();
+          }
+        }
+      }
+
+      // Set copyright year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Handle hash navigation on page load
+      window.addEventListener("load", () => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+          setTimeout(() => {
+            scrollToSection(hash);
+          }, 100);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integritetspolicy – Gargaar Omsorg AB</title>
+    <meta
+      name="description"
+      content="Läs om hur Gargaar Omsorg AB hanterar dina personuppgifter i enlighet med GDPR."
+    />
+    <meta name="author" content="Gargaar Omsorg AB" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: "hsl(158, 64%, 35%)",
+                foreground: "hsl(0, 0%, 100%)",
+                dark: "hsl(158, 70%, 25%)",
+              },
+              secondary: {
+                DEFAULT: "hsl(150, 25%, 92%)",
+                foreground: "hsl(160, 30%, 20%)",
+              },
+              muted: {
+                DEFAULT: "hsl(150, 15%, 94%)",
+                foreground: "hsl(160, 10%, 45%)",
+              },
+              emerald: {
+                DEFAULT: "hsl(158, 64%, 35%)",
+                dark: "hsl(158, 70%, 22%)",
+              },
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Source Sans 3", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --background: 150 20% 98%;
+        --foreground: 160 30% 15%;
+        --primary: 158 64% 35%;
+        --primary-foreground: 0 0% 100%;
+        --primary-dark: 158 70% 25%;
+        --secondary: 150 25% 92%;
+        --secondary-foreground: 160 30% 20%;
+        --muted: 150 15% 94%;
+        --muted-foreground: 160 10% 45%;
+        --emerald-dark: 158 70% 22%;
+      }
+
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .bg-primary {
+        background-color: hsl(var(--primary));
+      }
+
+      .text-primary {
+        color: hsl(var(--primary));
+      }
+
+      .bg-primary-dark {
+        background-color: hsl(var(--primary-dark));
+      }
+
+      .text-primary-foreground {
+        color: hsl(var(--primary-foreground));
+      }
+
+      .bg-secondary {
+        background-color: hsl(var(--secondary));
+      }
+
+      .bg-muted {
+        background-color: hsl(var(--muted));
+      }
+
+      .text-muted-foreground {
+        color: hsl(var(--muted-foreground));
+      }
+
+      .bg-emerald-dark {
+        background-color: hsl(var(--emerald-dark));
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-family: "Source Sans 3", sans-serif;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+      .btn-default {
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        box-shadow: 0 2px 8px rgba(22, 101, 52, 0.2);
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+      }
+
+      .btn-default:hover {
+        background-color: hsl(var(--primary-dark));
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4">
+      <div class="container mx-auto px-4 lg:px-8">
+        <nav class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div
+              class="w-10 h-10 rounded-full bg-primary flex items-center justify-center"
+            >
+              <span
+                class="text-primary-foreground font-display font-bold text-lg"
+                >G</span
+              >
+            </div>
+            <span class="font-display font-semibold text-xl text-foreground">
+              Gargaar Omsorg AB
+            </span>
+          </a>
+
+          <a href="index.html" class="btn btn-default">
+            Tillbaka till startsidan
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-16 lg:py-24">
+      <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+        <!-- Page Header -->
+        <div class="mb-12">
+          <span
+            class="inline-block px-4 py-2 bg-secondary rounded-full text-primary font-body font-semibold text-sm mb-4"
+          >
+            GDPR-kompatibel
+          </span>
+          <h1
+            class="font-display text-4xl md:text-5xl font-bold text-foreground mb-4"
+          >
+            Integritetspolicy
+          </h1>
+          <p class="text-lg text-muted-foreground">
+            Senast uppdaterad: <span id="current-date"></span>
+          </p>
+        </div>
+
+        <!-- Content -->
+        <div class="prose prose-lg max-w-none">
+          <!-- Introduction -->
+          <section class="mb-10">
+            <p class="text-foreground leading-relaxed mb-4">
+              Gargaar Omsorg AB ("vi", "oss", "vår") värnar om din integritet
+              och är engagerade i att skydda dina personuppgifter. Denna
+              integritetspolicy förklarar hur vi samlar in, använder, lagrar och
+              skyddar dina personuppgifter i enlighet med Dataskyddsförordningen
+              (GDPR).
+            </p>
+          </section>
+
+          <!-- Section 1 -->
+          <section class="mb-10 bg-muted p-6 rounded-xl">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              1. Personuppgiftsansvarig
+            </h2>
+            <p class="text-foreground leading-relaxed mb-2">
+              <strong>Företag:</strong> Gargaar Omsorg AB
+            </p>
+            <p class="text-foreground leading-relaxed mb-2">
+              <strong>Organisationsnummer:</strong> 559166-7448
+            </p>
+            <p class="text-foreground leading-relaxed mb-2">
+              <strong>Kontakt:</strong> nasir.caali@gmail.com
+            </p>
+            <p class="text-foreground leading-relaxed">
+              <strong>Telefon:</strong> 070-482 8573
+            </p>
+          </section>
+
+          <!-- Section 2 -->
+          <section class="mb-10">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              2. Vilka personuppgifter samlar vi in?
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Vi samlar endast in de personuppgifter som är nödvändiga för att
+              kunna tillhandahålla våra tjänster. Detta inkluderar:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-foreground">
+              <li>
+                <strong>Kontaktinformation:</strong> Namn, telefonnummer,
+                e-postadress
+              </li>
+              <li>
+                <strong>Tjänsteinformation:</strong> Vilken typ av tjänst du är
+                intresserad av (ledsagare, boendestöd)
+              </li>
+              <li>
+                <strong>Övrig information:</strong> Information du frivilligt
+                lämnar via vårt kontaktformulär eller vid kommunikation med oss
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section 3 -->
+          <section class="mb-10 bg-muted p-6 rounded-xl">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              3. Varför behandlar vi dina personuppgifter?
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Vi behandlar dina personuppgifter för följande ändamål:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-foreground">
+              <li>
+                <strong>För att kontakta dig:</strong> Svara på dina
+                förfrågningar och ge information om våra tjänster
+              </li>
+              <li>
+                <strong>För att tillhandahålla tjänster:</strong> Utföra
+                avtalade omsorgstjänster
+              </li>
+              <li>
+                <strong>För att uppfylla rättsliga skyldigheter:</strong>
+                Uppfylla krav enligt lag och myndighetsföreskrifter
+              </li>
+              <li>
+                <strong>För att förbättra våra tjänster:</strong> Utveckla och
+                förbättra kvaliteten på våra tjänster
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section 4 -->
+          <section class="mb-10">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              4. Laglig grund för behandling
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Vi behandlar dina personuppgifter baserat på följande rättsliga
+              grunder:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-foreground">
+              <li>
+                <strong>Samtycke:</strong> Du har gett ditt samtycke till
+                behandlingen genom att skicka in formuläret
+              </li>
+              <li>
+                <strong>Fullgörande av avtal:</strong> Behandlingen är nödvändig
+                för att fullgöra ett avtal med dig
+              </li>
+              <li>
+                <strong>Rättslig förpliktelse:</strong> Behandlingen är
+                nödvändig för att uppfylla en rättslig förpliktelse
+              </li>
+              <li>
+                <strong>Berättigat intresse:</strong> Behandlingen är nödvändig
+                för vårt berättigade intresse att driva vår verksamhet
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section 5 -->
+          <section class="mb-10 bg-muted p-6 rounded-xl">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              5. Hur länge sparar vi dina uppgifter?
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Vi sparar dina personuppgifter endast så länge som det är
+              nödvändigt för de ändamål som de samlades in för:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-foreground">
+              <li>
+                <strong>Förfrågningar:</strong> Upp till 12 månader efter sista
+                kontakten, om inget avtal ingås
+              </li>
+              <li>
+                <strong>Kundrelationer:</strong> Under avtalstiden och upp till
+                7 år därefter enligt bokföringslagen
+              </li>
+              <li>
+                <strong>Rättsliga krav:</strong> Så länge som krävs enligt lag
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section 6 -->
+          <section class="mb-10">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              6. Vem delar vi dina uppgifter med?
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Vi delar inte dina personuppgifter med tredje part utom när det är
+              nödvändigt för att tillhandahålla våra tjänster eller när vi är
+              skyldiga enligt lag. Detta kan inkludera:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-foreground">
+              <li>
+                <strong>IT-leverantörer:</strong> För att hantera och lagra data
+                säkert
+              </li>
+              <li><strong>Myndigheter:</strong> Vid rättslig skyldighet</li>
+              <li>
+                <strong>Samarbetspartners:</strong> När det är nödvändigt för
+                att utföra tjänsten (endast med ditt samtycke)
+              </li>
+            </ul>
+            <p class="text-foreground leading-relaxed mt-4">
+              Vi säljer aldrig dina personuppgifter till tredje part.
+            </p>
+          </section>
+
+          <!-- Section 7 -->
+          <section class="mb-10 bg-muted p-6 rounded-xl">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              7. Hur skyddar vi dina uppgifter?
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Vi vidtar lämpliga tekniska och organisatoriska säkerhetsåtgärder
+              för att skydda dina personuppgifter mot obehörig åtkomst, förlust
+              eller missbruk. Detta inkluderar:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-foreground">
+              <li>Krypterad dataöverföring (SSL/TLS)</li>
+              <li>Begränsad åtkomst till personuppgifter</li>
+              <li>Regelbundna säkerhetsöversikter</li>
+              <li>Utbildning av personal i dataskydd</li>
+            </ul>
+          </section>
+
+          <!-- Section 8 -->
+          <section class="mb-10">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              8. Dina rättigheter enligt GDPR
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Du har följande rättigheter enligt GDPR:
+            </p>
+            <div class="space-y-4">
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt till tillgång
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att få information om vilka personuppgifter vi
+                  behandlar om dig.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt till rättelse
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att få felaktiga uppgifter rättade.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt till radering
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att få dina uppgifter raderade under vissa
+                  förutsättningar.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt till begränsning
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att begära att behandlingen av dina uppgifter
+                  begränsas.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt till dataportabilitet
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att få ut dina uppgifter i ett strukturerat
+                  format.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt att göra invändningar
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att invända mot behandling som baseras på
+                  berättigat intresse.
+                </p>
+              </div>
+              <div class="border-l-4 border-primary pl-4">
+                <h3 class="font-semibold text-foreground mb-2">
+                  Rätt att återkalla samtycke
+                </h3>
+                <p class="text-muted-foreground">
+                  Du har rätt att när som helst återkalla ditt samtycke till
+                  behandling.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 9 -->
+          <section class="mb-10 bg-muted p-6 rounded-xl">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              9. Cookies
+            </h2>
+            <p class="text-foreground leading-relaxed">
+              Vår webbplats använder för närvarande inte cookies. Om detta
+              ändras kommer vi att uppdatera denna policy och informera dig om
+              vilka cookies som används och varför.
+            </p>
+          </section>
+
+          <!-- Section 10 -->
+          <section class="mb-10">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              10. Kontakta oss
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Om du har frågor om hur vi hanterar dina personuppgifter eller
+              vill utöva dina rättigheter, är du välkommen att kontakta oss:
+            </p>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <p class="text-foreground mb-2">
+                <strong>E-post:</strong>
+                <a
+                  href="mailto:nasir.caali@gmail.com"
+                  class="text-primary hover:underline"
+                  >nasir.caali@gmail.com</a
+                >
+              </p>
+              <p class="text-foreground mb-2">
+                <strong>Telefon:</strong>
+                <a href="tel:070-4828573" class="text-primary hover:underline"
+                  >070-482 8573</a
+                >
+              </p>
+              <p class="text-foreground">
+                <strong>Verksamhetschef:</strong> Nasser Hussein
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 11 -->
+          <section class="mb-10 bg-muted p-6 rounded-xl">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              11. Klagomål till tillsynsmyndighet
+            </h2>
+            <p class="text-foreground leading-relaxed mb-4">
+              Om du anser att vi behandlar dina personuppgifter på ett felaktigt
+              sätt har du rätt att lämna in ett klagomål till
+              Integritetsskyddsmyndigheten (IMY):
+            </p>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <p class="text-foreground mb-2">
+                <strong>Integritetsskyddsmyndigheten (IMY)</strong>
+              </p>
+              <p class="text-foreground mb-2">Box 8114, 104 20 Stockholm</p>
+              <p class="text-foreground mb-2">
+                <strong>Telefon:</strong> 08-657 61 00
+              </p>
+              <p class="text-foreground">
+                <strong>Webbplats:</strong>
+                <a
+                  href="https://www.imy.se"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary hover:underline"
+                  >www.imy.se</a
+                >
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 12 -->
+          <section class="mb-10">
+            <h2 class="font-display text-2xl font-bold text-foreground mb-4">
+              12. Ändringar av integritetspolicyn
+            </h2>
+            <p class="text-foreground leading-relaxed">
+              Vi förbehåller oss rätten att uppdatera denna integritetspolicy
+              när det behövs för att återspegla förändringar i hur vi behandlar
+              personuppgifter eller förändringar i lagstiftningen. Den senaste
+              versionen finns alltid tillgänglig på vår webbplats.
+            </p>
+          </section>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 bg-primary p-8 rounded-2xl text-center">
+          <h3 class="font-display text-2xl font-bold text-white mb-4">
+            Har du frågor om vår integritetspolicy?
+          </h3>
+          <p class="text-white/90 mb-6">
+            Tveka inte att kontakta oss – vi hjälper dig gärna!
+          </p>
+          <a
+            href="index.html#kontakt"
+            class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Kontakta oss
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-dark py-12 mt-16">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <!-- Logo & Company Name -->
+          <a href="index.html" class="flex items-center gap-2 group">
+            <div
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"
+            >
+              <span class="text-white font-display font-bold text-lg">G</span>
+            </div>
+            <span class="font-display font-semibold text-xl text-white">
+              Gargaar Omsorg AB
+            </span>
+          </a>
+
+          <!-- Copyright -->
+          <p class="font-body text-white/70 text-sm text-center">
+            © <span id="current-year"></span> Gargaar Omsorg AB – Alla
+            rättigheter förbehållna
+          </p>
+
+          <!-- Quick Links -->
+          <div class="flex items-center gap-6">
+            <a
+              href="index.html"
+              class="font-body text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Startsida
+            </a>
+            <a
+              href="privacy-policy.html"
+              class="font-body text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Integritetspolicy
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Set current date
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("current-date").textContent =
+        new Date().toLocaleDateString("sv-SE", options);
+    </script>
+  </body>
+</html>
