@@ -1937,41 +1937,34 @@
           // Create FormData
           const formData = new FormData(this);
 
-          // Submit via AJAX
+          // Submit via AJAX to server-side PHP handler
           fetch("submit-form.php", {
             method: "POST",
             body: formData,
           })
             .then((response) => {
-              console.log("Response status:", response.status);
               if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                return response.json().then((d) => {
+                  throw new Error(d.message || `HTTP ${response.status}`);
+                });
               }
               return response.json();
             })
             .then((data) => {
-              console.log("Response data:", data);
               if (data.success) {
-                // Show success message
-                document
-                  .getElementById("successMessage")
-                  .classList.add("visible");
-                // Clear form
+                document.getElementById("successMessage").classList.add("visible");
                 this.reset();
-                // Hide form temporarily
                 setTimeout(() => {
                   closeModal();
                 }, 3000);
               } else {
-                alert(
-                  "Ett fel uppstod: " + (data.message || "Försök igen senare.")
-                );
+                alert("Ett fel uppstod: " + (data.message || "Försök igen senare."));
               }
             })
             .catch((error) => {
               console.error("Fetch error:", error);
               alert(
-                "Ett fel uppstod vid skickandet. Kontrollera att PHP är aktiverat.\n\nFelmeddelande: " +
+                "Ett fel uppstod vid skickandet. Kontrollera serverkonfigurationen.\n\nFel: " +
                   error.message
               );
             })

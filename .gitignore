@@ -1,1 +1,6 @@
+# Ignore environment file with secrets
+.env
+
+# Optional: vendor directory if using Composer
+vendor/
 submit-form.php
